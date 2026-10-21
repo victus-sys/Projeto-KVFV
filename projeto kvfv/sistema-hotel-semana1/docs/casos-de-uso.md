@@ -2,100 +2,110 @@
 
 ## 1. Visão geral
 
-O Sistema de Gerenciamento de Hotel tem como objetivo auxiliar no controle de hóspedes,
-quartos, reservas, funcionários, check-in, check-out e relatórios.
+O Sistema de Gerenciamento de Hotel tem como objetivo auxiliar no controle de hóspedes, quartos, reservas, hospedagens, pagamentos, funcionários e relatórios, facilitando as atividades administrativas e o atendimento aos clientes.
 
 ## 2. Atores
 
 ### Administrador
-Responsável pelo gerenciamento geral do sistema, funcionários, quartos e relatórios.
+Responsável pelo gerenciamento geral do sistema, pelo cadastro de quartos e funcionários e pela consulta de relatórios.
 
 ### Recepcionista
-Responsável pelo atendimento aos hóspedes, cadastro, reservas, check-in e check-out.
+Responsável pelo atendimento aos hóspedes, cadastro e consulta de informações, realização de reservas, check-in, check-out e registro de pagamentos.
 
 ### Hóspede
-Cliente que utiliza os serviços do hotel e fornece seus dados para hospedagem.
+Cliente que utiliza os serviços do hotel e fornece seus dados para realizar uma hospedagem.
 
 ## 3. Casos de uso
 
 | Código | Caso de uso | Ator principal |
 |---|---|---|
-| UC01 | Realizar login | Administrador / Recepcionista |
-| UC02 | Cadastrar hóspede | Recepcionista |
-| UC03 | Consultar hóspede | Recepcionista |
-| UC04 | Editar hóspede | Recepcionista |
-| UC05 | Cadastrar quarto | Administrador |
-| UC06 | Consultar quartos | Recepcionista |
-| UC07 | Realizar reserva | Recepcionista |
-| UC08 | Cancelar reserva | Recepcionista |
-| UC09 | Registrar check-in | Recepcionista |
-| UC10 | Registrar check-out | Recepcionista |
-| UC11 | Gerenciar funcionários | Administrador |
-| UC12 | Gerar relatório | Administrador |
+| UC01 | Cadastrar hóspede | Recepcionista |
+| UC02 | Consultar hóspedes | Recepcionista |
+| UC03 | Cadastrar quarto | Administrador |
+| UC04 | Consultar quartos | Recepcionista |
+| UC05 | Realizar reserva | Recepcionista |
+| UC06 | Consultar reservas | Recepcionista |
+| UC07 | Cancelar reserva | Recepcionista |
+| UC08 | Realizar check-in | Recepcionista |
+| UC09 | Realizar check-out | Recepcionista |
+| UC10 | Registrar pagamento | Recepcionista |
+| UC11 | Cadastrar funcionário | Administrador |
+| UC12 | Gerar relatório de hospedagens | Administrador |
 
 ## 4. Especificações resumidas
 
-### UC01 — Realizar login
-**Ator:** Administrador / Recepcionista  
-**Descrição:** permite acesso conforme usuário, senha e perfil.
+### UC01 — Cadastrar hóspede
+**Ator:** Recepcionista
 
-### UC02 — Cadastrar hóspede
-**Ator:** Recepcionista  
-**Descrição:** cadastra os dados de um novo hóspede.
+**Descrição:** permite cadastrar os dados pessoais e de contato de um novo hóspede.
 
-### UC03 — Consultar hóspede
-**Ator:** Recepcionista  
-**Descrição:** localiza os dados de um hóspede.
+### UC02 — Consultar hóspedes
+**Ator:** Recepcionista
 
-### UC04 — Editar hóspede
-**Ator:** Recepcionista  
-**Descrição:** altera dados de um hóspede já cadastrado.
+**Descrição:** permite listar e localizar hóspedes cadastrados por nome ou CPF.
 
-### UC05 — Cadastrar quarto
-**Ator:** Administrador  
-**Descrição:** cadastra um quarto e seu tipo/status.
+### UC03 — Cadastrar quarto
+**Ator:** Administrador
 
-### UC06 — Consultar quartos
-**Ator:** Recepcionista  
-**Descrição:** consulta quartos e disponibilidade.
+**Descrição:** permite registrar quartos, seus números, tipos e valores de diária.
 
-### UC07 — Realizar reserva
-**Ator:** Recepcionista  
-**Descrição:** registra uma reserva para um hóspede.
+### UC04 — Consultar quartos
+**Ator:** Recepcionista
 
-### UC08 — Cancelar reserva
-**Ator:** Recepcionista  
-**Descrição:** cancela uma reserva existente e libera o quarto.
+**Descrição:** permite consultar os quartos cadastrados e verificar suas informações e disponibilidade.
 
-### UC09 — Registrar check-in
-**Ator:** Recepcionista  
-**Descrição:** registra a entrada do hóspede.
+### UC05 — Realizar reserva
+**Ator:** Recepcionista
 
-### UC10 — Registrar check-out
-**Ator:** Recepcionista  
-**Descrição:** registra a saída do hóspede e libera o quarto.
+**Descrição:** permite registrar uma reserva vinculada a um hóspede, a um quarto e a um período de hospedagem.
 
-### UC11 — Gerenciar funcionários
-**Ator:** Administrador  
-**Descrição:** cadastra, consulta e edita funcionários/usuários.
+### UC06 — Consultar reservas
+**Ator:** Recepcionista
 
-### UC12 — Gerar relatório
-**Ator:** Administrador  
-**Descrição:** gera relatórios a partir dos dados do sistema.
+**Descrição:** permite consultar as reservas cadastradas, incluindo hóspede, quarto, datas e situação.
+
+### UC07 — Cancelar reserva
+**Ator:** Recepcionista
+
+**Descrição:** permite cancelar uma reserva existente, desde que ela possa ser cancelada de acordo com sua situação.
+
+### UC08 — Realizar check-in
+**Ator:** Recepcionista
+
+**Descrição:** permite registrar a chegada do hóspede e iniciar sua hospedagem mediante uma reserva válida.
+
+### UC09 — Realizar check-out
+**Ator:** Recepcionista
+
+**Descrição:** permite registrar a saída do hóspede e finalizar sua hospedagem, liberando o quarto conforme as regras do sistema.
+
+### UC10 — Registrar pagamento
+**Ator:** Recepcionista
+
+**Descrição:** permite registrar o pagamento referente a uma hospedagem, incluindo valor e forma de pagamento.
+
+### UC11 — Cadastrar funcionário
+**Ator:** Administrador
+
+**Descrição:** permite cadastrar funcionários e registrar suas informações pessoais e profissionais.
+
+### UC12 — Gerar relatório de hospedagens
+**Ator:** Administrador
+
+**Descrição:** permite consultar e apresentar informações das hospedagens registradas, incluindo períodos e situações.
 
 ## 5. Rastreabilidade
 
 | Caso de uso | História de usuário |
 |---|---|
-| UC01 | HU01 |
-| UC02 | HU02 |
-| UC03 | HU03 |
-| UC04 | HU04 |
-| UC05 | HU05 |
-| UC06 | HU06 |
-| UC07 | HU07 |
-| UC08 | HU08 |
-| UC09 | HU09 |
-| UC10 | HU10 |
-| UC11 | HU11 |
-| UC12 | HU12 |
+| UC01 — Cadastrar hóspede | HU01 — Cadastrar hóspede |
+| UC02 — Consultar hóspedes | HU02 — Consultar hóspedes |
+| UC03 — Cadastrar quarto | HU03 — Cadastrar quarto |
+| UC04 — Consultar quartos | HU04 — Consultar quartos |
+| UC05 — Realizar reserva | HU05 — Realizar reserva |
+| UC06 — Consultar reservas | HU06 — Consultar reservas |
+| UC07 — Cancelar reserva | HU07 — Cancelar reserva |
+| UC08 — Realizar check-in | HU08 — Realizar check-in |
+| UC09 — Realizar check-out | HU09 — Realizar check-out |
+| UC10 — Registrar pagamento | HU10 — Registrar pagamento |
+| UC11 — C
