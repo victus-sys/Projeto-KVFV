@@ -1,0 +1,34 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Diagrama de Casos de Uso">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="Sistema de Gerenciamento de Hotel" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;verticalAlign=top;align=left;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="260" y="40" width="760" height="680" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="Administrador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="60" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="Recepcionista" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="450" width="60" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="Hóspede" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="450" width="60" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="UC01 Realizar login" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="340" y="100" width="250" height="50" as="geometry"/></mxCell>
+        <mxCell id="7" value="UC02 Cadastrar hóspede" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="650" y="100" width="250" height="50" as="geometry"/></mxCell>
+        <mxCell id="8" value="UC03 Consultar hóspede" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="340" y="180" width="250" height="50" as="geometry"/></mxCell>
+        <mxCell id="9" value="UC04 Editar hóspede" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="650" y="180" width="250" height="50" as="geometry"/></mxCell>
+        <mxCell id="10" value="UC05 Cadastrar quarto" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="340" y="260" width="250" height="50" as="geometry"/></mxCell>
+        <mxCell id="11" value="UC06 Consultar quartos" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="650" y="260" width="250" height="50" as="geometry"/></mxCell>
+        <mxCell id="12" value="UC07 Realizar reserva" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="340" y="340" width="250" height="50" as="geometry"/></mxCell>
+        <mxCell id="13" value="UC08 Cancelar reserva" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="650" y="340" width="250" height="50" as="geometry"/></mxCell>
+        <mxCell id="14" value="UC09 Registrar check-in" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="340" y="420" width="250" height="50" as="geometry"/></mxCell>
+        <mxCell id="15" value="UC10 Registrar check-out" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="650" y="420" width="250" height="50" as="geometry"/></mxCell>
+        <mxCell id="16" value="UC11 Gerenciar funcionários" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="340" y="500" width="250" height="50" as="geometry"/></mxCell>
+        <mxCell id="17" value="UC12 Gerar relatório" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="650" y="500" width="250" height="50" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
