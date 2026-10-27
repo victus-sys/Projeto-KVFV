@@ -14,9 +14,9 @@ Projeto da disciplina **Análise e Projeto de Sistemas**.
 ## Integrantes
 
 - Victor
-- Integrante 2
-- Integrante 3
-- Integrante 4
+- Francisco Vinicius
+- Kauã David
+- Vitoria Ellen
 
 > Substitua os nomes acima pelos nomes reais do grupo.
 
