@@ -18,8 +18,6 @@ Projeto da disciplina **Análise e Projeto de Sistemas**.
 - Kauã David
 - Vitoria Ellen
 
-> Substitua os nomes acima pelos nomes reais do grupo.
-
 ## Como executar
 
 É necessário ter Java 21 e Maven instalados.
