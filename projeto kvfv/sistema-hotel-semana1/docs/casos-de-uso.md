@@ -98,14 +98,17 @@ Cliente que utiliza os serviços do hotel e fornece seus dados para realizar uma
 
 | Caso de uso | História de usuário |
 |---|---|
-| UC01 — Cadastrar hóspede | HU01 — Cadastrar hóspede |
-| UC02 — Consultar hóspedes | HU02 — Consultar hóspedes |
-| UC03 — Cadastrar quarto | HU03 — Cadastrar quarto |
-| UC04 — Consultar quartos | HU04 — Consultar quartos |
-| UC05 — Realizar reserva | HU05 — Realizar reserva |
-| UC06 — Consultar reservas | HU06 — Consultar reservas |
-| UC07 — Cancelar reserva | HU07 — Cancelar reserva |
-| UC08 — Realizar check-in | HU08 — Realizar check-in |
-| UC09 — Realizar check-out | HU09 — Realizar check-out |
-| UC10 — Registrar pagamento | HU10 — Registrar pagamento |
-| UC11 — C
+| UC01 — Cadastrar hóspede | HU02 — Cadastrar hóspedes |
+| UC02 — Consultar hóspedes | HU03 — Consultar hóspedes |
+| UC03 — Cadastrar quarto | HU04 — Cadastrar quartos |
+| UC04 — Consultar quartos | HU05 — Consultar quartos |
+| UC05 — Realizar reserva | HU06 — Realizar reservas |
+| UC06 — Consultar reservas | HU07 — Consultar reservas |
+| UC07 — Cancelar reserva | HU08 — Cancelar reservas |
+| UC08 — Realizar check-in | HU09 — Registrar check-in |
+| UC09 — Realizar check-out | HU10 — Registrar check-out |
+| UC10 — Registrar pagamento | HU11 — Registrar pagamentos |
+| UC11 — Cadastrar funcionário | HU12 — Cadastrar funcionários |
+| UC12 — Gerar relatório de hospedagens | HU13 — Gerar relatórios |
+
+HU01 descreve a autenticação obrigatória do sistema e HU14 cobre a edição de hóspedes. Essas histórias complementam os casos de uso listados acima.
