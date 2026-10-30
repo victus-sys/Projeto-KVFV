@@ -1,6 +1,6 @@
-# Sistema de Gerenciamento de Hotel
+# Hotel Alba
 
-Projeto acadêmico da disciplina de Análise e Projeto de Sistemas. A versão atual permite cadastrar, consultar, editar e excluir hóspedes em uma aplicação desktop.
+Projeto acadêmico da disciplina de Análise e Projeto de Sistemas. A versão atual permite cadastrar, consultar, editar e excluir hóspedes em uma aplicação desktop para o Hotel Alba.
 
 ## Tecnologias
 

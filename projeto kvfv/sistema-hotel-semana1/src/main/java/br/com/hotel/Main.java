@@ -6,10 +6,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.sql.Connection;
@@ -31,8 +35,19 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
 
-        Label titulo = new Label("Sistema de Gerenciamento de Hotel");
-        titulo.setStyle("-fx-font-size: 22px; -fx-font-weight: bold;");
+        Image logoImagem = new Image(
+                getClass().getResourceAsStream("/images/logo-hotel-alba.jpeg")
+        );
+        ImageView logo = new ImageView(logoImagem);
+        logo.setFitWidth(110);
+        logo.setFitHeight(110);
+        logo.setPreserveRatio(true);
+
+        Label titulo = new Label("Hotel Alba");
+        titulo.setStyle("-fx-font-size: 28px; -fx-font-weight: bold;");
+
+        HBox cabecalho = new HBox(16, logo, titulo);
+        cabecalho.setAlignment(Pos.CENTER_LEFT);
 
         Label subtitulo = new Label("Cadastrar hóspede");
 
@@ -255,7 +270,7 @@ public class Main extends Application {
         // MONTAR INTERFACE
         VBox layout = new VBox(
                 14,
-                titulo,
+                cabecalho,
                 subtitulo,
                 formulario,
                 salvar,
@@ -272,9 +287,10 @@ public class Main extends Application {
 
         layout.setPadding(new Insets(22));
 
-        Scene cena = new Scene(layout, 800, 650);
+        Scene cena = new Scene(layout, 800, 740);
 
-        stage.setTitle("Sistema de Hotel");
+        stage.setTitle("Hotel Alba - Sistema de Gerenciamento");
+        stage.getIcons().add(logoImagem);
         stage.setScene(cena);
         stage.show();
 

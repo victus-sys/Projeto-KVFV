@@ -1,4 +1,4 @@
-# Sistema de Gerenciamento de Hotel
+# Hotel Alba — Sistema de Gerenciamento
 
 Projeto da disciplina **Análise e Projeto de Sistemas**.
 
