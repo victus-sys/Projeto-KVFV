@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mxfile host="app.diagrams.net" type="device">
   <diagram id="hotel-alba-casos-uso" name="Casos de uso - Hotel Alba">
-    <mxGraphModel dx="1800" dy="1280" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1280" math="0" shadow="0">
+    <mxGraphModel dx="1800" dy="1600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1600" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="boundary" value="Sistema de Gerenciamento de Hotel" style="swimlane;startSize=48;rounded=1;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#52606d;fontSize=22;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="315" y="125" width="1230" height="1070" as="geometry" />
+          <mxGeometry x="315" y="125" width="1230" height="1400" as="geometry" />
         </mxCell>
         <mxCell id="title" value="Diagrama de Casos de Uso — Hotel Alba" style="text;html=1;align=center;verticalAlign=middle;fontSize=30;fontStyle=1;fontColor=#1f2937;" vertex="1" parent="1">
           <mxGeometry x="40" y="24" width="1720" height="48" as="geometry" />
         </mxCell>
-        <mxCell id="subtitle" value="Escopo documentado: 3 atores e 12 casos de uso" style="text;html=1;align=center;verticalAlign=middle;fontSize=17;fontColor=#52606d;" vertex="1" parent="1">
+        <mxCell id="subtitle" value="Escopo documentado: 3 atores e 17 casos de uso" style="text;html=1;align=center;verticalAlign=middle;fontSize=17;fontColor=#52606d;" vertex="1" parent="1">
           <mxGeometry x="40" y="72" width="1720" height="32" as="geometry" />
         </mxCell>
         <mxCell id="section_admin" value="ADMINISTRAÇÃO" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#52606d;" vertex="1" parent="1">
@@ -65,8 +65,23 @@
         <mxCell id="uc12" value="UC12 — Gerar relatório de hospedagens" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eaf3fb;strokeColor=#547b9c;fontSize=18;fontColor=#1f2937;" vertex="1" parent="1">
           <mxGeometry x="430" y="415" width="1000" height="58" as="geometry" />
         </mxCell>
+        <mxCell id="uc13" value="UC13 — Autenticar usuário" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eaf3fb;strokeColor=#547b9c;fontSize=18;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="430" y="1110" width="1000" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="uc14" value="UC14 — Criar conta de hóspede" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eaf3fb;strokeColor=#547b9c;fontSize=18;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="430" y="1175" width="1000" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="uc15" value="UC15 — Editar hóspede" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eaf3fb;strokeColor=#547b9c;fontSize=18;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="430" y="1240" width="1000" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="uc16" value="UC16 — Calcular valor da hospedagem" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eaf3fb;strokeColor=#547b9c;fontSize=18;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="430" y="1305" width="1000" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="uc17" value="UC17 — Consultar disponibilidade do quarto" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eaf3fb;strokeColor=#547b9c;fontSize=18;fontColor=#1f2937;" vertex="1" parent="1">
+          <mxGeometry x="430" y="1370" width="1000" height="58" as="geometry" />
+        </mxCell>
         <mxCell id="note" value="O hóspede participa do processo de reserva; o ator principal de UC05 é a recepcionista." style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#52606d;" vertex="1" parent="1">
-          <mxGeometry x="365" y="1110" width="1030" height="32" as="geometry" />
+          <mxGeometry x="365" y="1450" width="1030" height="32" as="geometry" />
         </mxCell>
         <mxCell id="e01" source="receptionist" target="uc01" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;endArrow=none;strokeColor=#596579;strokeWidth=1.4;">
           <mxGeometry relative="1" as="geometry" />
@@ -107,6 +122,13 @@
         <mxCell id="e_guest_uc05" source="guest" target="uc05" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;endArrow=none;strokeColor=#596579;strokeWidth=1.4;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="e13_admin" source="admin" target="uc13" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;endArrow=none;strokeColor=#596579;strokeWidth=1.4;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e13_receptionist" source="receptionist" target="uc13" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;endArrow=none;strokeColor=#596579;strokeWidth=1.4;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e13_guest" source="guest" target="uc13" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;endArrow=none;strokeColor=#596579;strokeWidth=1.4;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e14_guest" source="guest" target="uc14" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;endArrow=none;strokeColor=#596579;strokeWidth=1.4;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e15_receptionist" source="receptionist" target="uc15" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;endArrow=none;strokeColor=#596579;strokeWidth=1.4;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e16_receptionist" source="receptionist" target="uc16" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;endArrow=none;strokeColor=#596579;strokeWidth=1.4;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e17_receptionist" source="receptionist" target="uc17" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;endArrow=none;strokeColor=#596579;strokeWidth=1.4;"><mxGeometry relative="1" as="geometry" /></mxCell>
       </root>
     </mxGraphModel>
   </diagram>

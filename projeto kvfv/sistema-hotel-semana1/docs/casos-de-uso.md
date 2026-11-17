@@ -31,6 +31,11 @@ Cliente que utiliza os serviços do hotel e fornece seus dados para realizar uma
 | UC10 | Registrar pagamento | Recepcionista |
 | UC11 | Cadastrar funcionário | Administrador |
 | UC12 | Gerar relatório de hospedagens | Administrador |
+| UC13 | Autenticar usuário | Administrador, recepcionista ou hóspede |
+| UC14 | Criar conta de hóspede | Hóspede |
+| UC15 | Editar hóspede | Recepcionista |
+| UC16 | Calcular valor da hospedagem | Recepcionista |
+| UC17 | Consultar disponibilidade do quarto | Recepcionista |
 
 ## 4. Especificações resumidas
 
@@ -94,6 +99,31 @@ Cliente que utiliza os serviços do hotel e fornece seus dados para realizar uma
 
 **Descrição:** permite consultar e apresentar informações das hospedagens registradas, incluindo períodos e situações.
 
+### UC13 — Autenticar usuário
+**Ator:** Administrador, recepcionista ou hóspede
+
+**Descrição:** valida as credenciais e abre a área permitida ao perfil autenticado.
+
+### UC14 — Criar conta de hóspede
+**Ator:** Hóspede
+
+**Descrição:** permite que o hóspede crie uma conta vinculada ao próprio cadastro para consultar seus dados.
+
+### UC15 — Editar hóspede
+**Ator:** Recepcionista
+
+**Descrição:** permite atualizar os dados de contato e identificação de um hóspede cadastrado.
+
+### UC16 — Calcular valor da hospedagem
+**Ator:** Recepcionista
+
+**Descrição:** soma o valor das diárias associadas à hospedagem para apresentar o total a pagar.
+
+### UC17 — Consultar disponibilidade do quarto
+**Ator:** Recepcionista
+
+**Descrição:** verifica se o quarto está livre no período solicitado, considerando reservas que não foram canceladas ou concluídas.
+
 ## 5. Rastreabilidade
 
 | Caso de uso | História de usuário |
@@ -110,5 +140,8 @@ Cliente que utiliza os serviços do hotel e fornece seus dados para realizar uma
 | UC10 — Registrar pagamento | HU11 — Registrar pagamentos |
 | UC11 — Cadastrar funcionário | HU12 — Cadastrar funcionários |
 | UC12 — Gerar relatório de hospedagens | HU13 — Gerar relatórios |
-
-HU01 descreve a autenticação obrigatória do sistema e HU14 cobre a edição de hóspedes. Essas histórias complementam os casos de uso listados acima.
+| UC13 — Autenticar usuário | HU01 — Entrar com perfil de acesso |
+| UC14 — Criar conta de hóspede | HU15 — Criar conta de hóspede |
+| UC15 — Editar hóspede | HU14 — Editar dados de hóspedes |
+| UC16 — Calcular valor da hospedagem | HU16 — Calcular o valor da hospedagem |
+| UC17 — Consultar disponibilidade do quarto | HU17 — Consultar disponibilidade de quarto |

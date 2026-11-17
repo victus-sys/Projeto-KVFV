@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Entrar')}" />
+<body><main class="auth-card">
+  <img class="brand-logo auth-logo" th:src="@{/images/logo-hotel-alba.jpeg}" alt="Logo Hotel Alba"><p class="eyebrow">HOTEL ALBA</p><h1>Bem-vindo</h1><p class="muted">Escolha seu perfil para entrar.</p>
+  <p class="notice error" th:if="${tipoInvalido}">Esse acesso não corresponde ao perfil escolhido. Confira a opção e tente novamente.</p><p class="notice success" th:if="${dadosAtualizados}">Dados atualizados. Entre novamente com seu e-mail de acesso.</p><p class="notice success" th:if="${sucesso}" th:text="${sucesso}"></p><p class="notice error" th:if="${param.error}">E-mail ou senha incorretos.</p><p class="notice success" th:if="${param.logout}">Você saiu do sistema.</p>
+  <div class="role-picker"><a th:href="@{/login(perfil='admin')}" th:classappend="${perfilSelecionado == 'admin' ? ' selected' : ''}">Administrador</a><a th:href="@{/login(perfil='funcionario')}" th:classappend="${perfilSelecionado == 'funcionario' ? ' selected' : ''}">Funcionário</a><a th:href="@{/login(perfil='hospede')}" th:classappend="${perfilSelecionado == 'hospede' ? ' selected' : ''}">Hóspede</a></div>
+  <p class="profile-hint" th:text="${perfilSelecionado == 'admin' ? 'Acesso administrativo do hotel.' : (perfilSelecionado == 'funcionario' ? 'Acesso criado pelo administrador para a equipe.' : 'Entre com o e-mail e a senha que você cadastrou.')}">Acesso administrativo do hotel.</p>
+  <form th:action="@{/login}" method="post" class="stack"><input type="hidden" name="perfil" th:value="${perfilSelecionado}"><label>E-mail<input name="username" type="email" autocomplete="username" required autofocus></label><label>Senha<input name="password" type="password" autocomplete="current-password" required></label><button class="button primary" type="submit">Entrar</button></form>
+  <p class="auth-foot" th:if="${perfilSelecionado == 'hospede'}">Ainda não tem conta? <a th:href="@{/cadastro}">Cadastre-se como hóspede</a></p><p class="auth-foot" th:unless="${perfilSelecionado == 'hospede'}">O acesso de funcionário é criado pelo administrador.</p>
+</main></body></html>

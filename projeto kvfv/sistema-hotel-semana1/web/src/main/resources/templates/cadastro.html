@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Criar conta')}" />
+<body><main class="auth-card wide">
+  <a class="back-link" th:href="@{/login}">← Voltar ao acesso</a><img class="brand-logo auth-logo" th:src="@{/images/logo-hotel-alba.jpeg}" alt="Logo Hotel Alba"><p class="eyebrow">HOTEL ALBA</p><h1>Cadastro de hóspede</h1><p class="muted">Crie uma conta para acompanhar sua relação com o hotel.</p>
+  <form th:action="@{/cadastro}" th:object="${form}" method="post" class="stack"><label>Nome completo<input th:field="*{nome}" required><small class="field-error" th:errors="*{nome}"></small></label><label>E-mail<input th:field="*{login}" type="email" autocomplete="email" required><small class="field-error" th:errors="*{login}"></small></label><label>Senha<input th:field="*{senha}" type="password" autocomplete="new-password" required><small class="field-error" th:errors="*{senha}"></small></label><label>Confirmar senha<input th:field="*{confirmacao}" type="password" autocomplete="new-password" required><small class="field-error" th:errors="*{confirmacao}"></small></label><button class="button primary" type="submit">Criar conta</button></form>
+</main></body></html>

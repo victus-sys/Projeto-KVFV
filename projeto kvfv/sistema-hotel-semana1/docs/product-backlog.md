@@ -4,7 +4,7 @@ Histórias de usuário do Hotel Alba, organizadas por prioridade. Os itens descr
 
 | ID | História de usuário | Prioridade |
 |---|---|---|
-| HU01 | Como administrador ou recepcionista, quero entrar com meu usuário e perfil para acessar o sistema. | Alta |
+| HU01 | Como administrador, recepcionista ou hóspede, quero entrar com meu usuário e perfil para acessar a área permitida. | Alta |
 | HU02 | Como recepcionista, quero cadastrar hóspedes para manter seus dados registrados. | Alta |
 | HU03 | Como recepcionista, quero consultar hóspedes por nome ou documento para localizar seus dados. | Alta |
 | HU04 | Como administrador, quero cadastrar quartos para controlar as acomodações. | Alta |
@@ -18,3 +18,6 @@ Histórias de usuário do Hotel Alba, organizadas por prioridade. Os itens descr
 | HU12 | Como administrador, quero cadastrar funcionários para manter os dados da equipe. | Média |
 | HU13 | Como administrador, quero gerar relatórios de hospedagens para acompanhar a operação do hotel. | Média |
 | HU14 | Como recepcionista, quero editar dados de hóspedes para mantê-los atualizados. | Média |
+| HU15 | Como hóspede, quero criar uma conta vinculada ao meu cadastro para consultar meus dados. | Média |
+| HU16 | Como recepcionista, quero calcular o total das diárias de uma hospedagem para informar o valor a pagar. | Alta |
+| HU17 | Como recepcionista, quero verificar a disponibilidade de um quarto no período solicitado para evitar reservas conflitantes. | Alta |

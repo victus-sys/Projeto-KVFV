@@ -1,56 +1,52 @@
 # Hotel Alba — Sistema de Gerenciamento
 
-Aplicação desktop acadêmica para apoiar o gerenciamento de um hotel. O trabalho documenta o problema, os atores, as histórias de usuário e os casos de uso. A versão executável atual concentra-se no cadastro de hóspedes.
+Aplicação acadêmica de gerenciamento de hotel, com interface JavaFX desktop e uma interface web complementar. Ambas persistem no mesmo banco SQLite local.
 
-## Funcionalidades disponíveis
+## Funcionalidades
 
-- Cadastrar hóspedes com nome, documento, telefone e e-mail.
-- Consultar e pesquisar hóspedes por nome ou documento.
-- Editar e excluir hóspedes.
-- Validar o preenchimento do nome e o formato do e-mail quando informado.
-- Criar e utilizar um banco SQLite local.
+- **Administrador:** gerencia hóspedes, quartos, funcionários, reservas e acompanha relatórios de ocupação.
+- **Funcionário/atendente:** cadastra e atualiza hóspedes, consulta quartos e reservas, confirma reservas e realiza check-in/check-out.
+- **Hóspede:** cria a própria conta, atualiza os dados e a senha, consulta quartos por período, realiza reservas e vê/cancela apenas as próprias reservas.
+- O sistema impede conflito de datas, bloqueia quartos em manutenção e calcula o valor da hospedagem no check-out a partir da diária e das noites.
+- O mapa de quartos é uma visualização simples dos quartos cadastrados no banco. Não há hóspedes, funcionários ou quartos de exemplo criados automaticamente.
 
-As funções de login, quartos, reservas, check-in, check-out, pagamentos, funcionários e relatórios estão no planejamento e ainda não foram implementadas na interface.
+## Requisitos
 
-## Situação em relação aos requisitos do semestre
-
-O projeto já tem três atores e doze casos de uso documentados, além de duas validações no cadastro de hóspedes (nome obrigatório e formato do e-mail). Para cumprir todos os requisitos mínimos de complexidade ao longo do semestre, ainda será necessário implementar autenticação com perfis, ampliar as classes de domínio para pelo menos nove e modelar uma entidade com ciclo de vida de ao menos quatro estados. A versão atual é uma etapa inicial e ainda não atende a esses itens pendentes.
-
-## Tecnologias
-
-- Java 21
-- JavaFX
-- SQLite via `sqlite-jdbc` e JDBC
+- JDK 21
 - Maven
 
-## Como executar
+## Executar o desktop
 
-É necessário ter JDK 21 e Maven instalados. No terminal, nesta pasta (a mesma deste `pom.xml`), execute:
+No terminal, nesta pasta (a mesma deste `pom.xml`), execute:
 
 ```bash
 mvn javafx:run
 ```
 
-Na primeira execução, o sistema cria a pasta `data/` e o banco `data/hotel.db` no diretório de execução. O banco contém tabelas para usuários, hóspedes, quartos e reservas; nesta versão, a interface trabalha com hóspedes.
+## Executar a web
 
-## Integrantes
+Entre na pasta `web` e execute:
 
-- Victor
-- Francisco Vinicius
-- Kauã David
-- Vitoria Ellen
-
-## Materiais da semana 1
-
-- [Documento de casos de uso](docs/casos-de-uso.md)
-- [Diagrama de casos de uso](docs/diagrama-de-casos-de-uso.md) (imagem PNG e fonte editável Draw.io)
-- [Product Backlog inicial](docs/product-backlog.md)
-
-## Estrutura resumida
-
-```text
-src/main/java/br/com/hotel/   código da aplicação
-src/main/resources/images/    imagem usada na interface
-docs/                         casos de uso, diagrama e backlog
-pom.xml                       dependências e configuração Maven
+```bash
+mvn spring-boot:run
 ```
+
+Abra `http://localhost:8080`. O servidor web usa `../data/hotel.db` quando iniciado da pasta `web`; o desktop usa `data/hotel.db` quando iniciado desta pasta.
+
+## Primeiro acesso
+
+Na primeira inicialização, o sistema cria uma conta administrativa de configuração: `admin@hotel.local` / `admin123`. Configure outras credenciais com `HOTEL_ADMIN_USERNAME` e `HOTEL_ADMIN_PASSWORD` antes da primeira execução, se preferir.
+
+O administrador cria os acessos de funcionários em **Funcionários**. Hóspedes criam as próprias contas pela opção de cadastro no login. O administrador precisa cadastrar quartos e diárias antes de eles aparecerem como disponíveis para reserva.
+
+Faça cópia de `data/hotel.db` antes de testar mudanças se o banco já tiver informações que queira preservar.
+
+## Testes
+
+Execute os testes do desktop e da web separadamente:
+
+```bash
+mvn test
+```
+
+O primeiro comando deve ser executado nesta pasta; para testar a web, execute-o dentro de `web`.
